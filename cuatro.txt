@@ -1,0 +1,331 @@
+#############Contar personas############
+#masculino = 0
+#int(femenino=0)
+i = ac=j=hombre=mujer=h1=m1=0
+count = 0
+while i<4:
+	print("ingrese sexo")
+	print("h hombre o m mujer")
+	sexo = input()
+	print("ingrese edad")
+	edad = int(input())
+	i = i+1
+	if edad>18:
+		ac = ac+edad
+		j = j+1
+
+	if sexo=="h":
+		hombre = hombre+1
+		count = count+1
+		if edad>h1:
+			h1 = edad
+	elif sexo=="m":
+		mujer = mujer+1
+		count = count+1
+		if edad>m1:
+			m1 = edad
+# calculos
+prom = ac/j
+porceh = (hombre/4)*100
+porcem = (mujer/4)*100
+# salidas
+print("la cantidad de hombres es: ",hombre)
+print("la cantidad de mujeres es: ",mujer)
+print("el porcentaje de hombres es: ",porceh)
+print("el porcentaje de mujeres es: ",porcem)
+print("la edad mas alta en hombres es: ",h1)
+print("la edad mas alta en mujeres es: ",m1)
+print("el promedio es: ",prom)
+
+
+cadena=" Juan Guillermo Maldonado Rojas  "
+for i in cadena:
+    print(len(cadena))
+    print(cadena.upper())   
+    print(cadena.strip())
+    x = cadena.rfind(" ")
+    print(x)
+
+#Literales de cadena con formato
+base = 10.6666
+lado = 20.3891
+area_total = 2*base + lado
+
+print(f"El área de la base es {base:.2f}, el del lado {lado:.2f} y el área total es {area_total:.2f}")
+import datetime
+#from dateutil.relativedelta import relativedelta
+actual=datetime.date.today()
+nac=datetime.date(1998,4,25)
+print(actual)
+print(nac)
+edad = actual.year-nac.year
+print(f"{edad} años")
+
+#print(f"{edad.years} años, {edad.months} meses y {edad.days} días")
+
+######################Funciones
+def intro():
+    print('Este código solo imprime este mensaje.')
+
+intro()
+intro()
+
+################
+def imc_cal(peso,talla):
+    imc= peso/talla**2
+    print (imc)
+    if imc>30: 
+        print ("Obeso ")
+    elif imc>25:
+        print ("tiene sobrepeso")
+    elif imc>19:
+        print ("Peso normal")
+    else: 
+        print ("Esta desnutrido")
+    
+    return(imc)
+
+print("como esta su imc")
+imc=valor=(float)
+x=int(input("ingrese su peso en kg"))
+y=float(input("ingrese su talla en mt"))
+
+imc_cal(x,y)
+print(f"Su imc es: {imc} ud. esta")
+
+i = 1
+ 
+while( i<=100 ):
+    print(i)
+    i+=1
+
+#1º forma
+print("1 forma")
+for i in range(1,101):
+    if( (i%2)==0 ): 
+        print(i,end=" ")
+
+print("")
+ 
+#2º forma
+print("2 forma")
+for i in range(2,101,2):    
+    print(i)
+####################Estaciomanmiento
+
+"""
+print("Ingresa el valor de horas:")
+horas = float(input())
+print("Ingresa el valor de minutos:")
+minutos = float(input())
+print("Selecciona el valor de tipo de vehiculo.")
+print("    1.- Automóvil")
+print("    2.- Camioneta")
+print("    3.- Motocicleta")
+tipo_de_vehiculo = input()
+if tipo_de_vehiculo==1:
+	costo_por_hora = 600
+if tipo_de_vehiculo==2:
+	costo_por_hora = 800
+if tipo_de_vehiculo==3:
+	costo_por_hora = 300
+	pago = horas*costo_por_hora  #valor hora
+if minutos<20:
+	costom = 300
+else:
+	costom = (minutos-20)*15+300
+
+print("Valor por hora: ",pago)
+print("Valor por minutos: ",costom)
+print("Total a pagar ",pago+costom)
+
+"""
+################### casados solteros 
+
+print("Ingrese la cantidad de personas") 
+n=int(input())
+sexo=estado_civil=Soltera=Hcasado=Viudos=Div=int()
+for i in range(n):
+    print("Ingrese el sexo de la persona ")
+    print("1-Masculino")
+    print("2-Femenino")
+    sexo=int(input())
+    print("Ingrese el estado civil de la persona ")
+    print("1.-Casado")
+    print("2.-Soltero")
+    print("3.-Viudo")
+    print("4-Divorciado")
+    estado_civil=int(input())
+				
+    if sexo==2 and estado_civil==2:
+        Soltera=Soltera+1
+    if sexo==1 and estado_civil==1: 
+        Hcasado=Hcasado+1
+    if 	estado_civil==3:
+        Viudos=Viudos+1
+		
+    if estado_civil==4:
+        Div=Div+1
+PorcDiv=float()	    
+PorcDiv=(Div*n)*100
+print("La cantidad de mujeres solteras es: ",Soltera)
+print("La cantidad de hombres cadasos es: ",Hcasado)
+print("La cantidad de personas viudas es: ",Viudos)
+print(f" Porcentaje de personas divorciadas equivalen al  {PorcDiv} %")
+
+cadena=" Juan Guillermo Maldonado Rojas  "
+for i in cadena:
+    print(len(cadena))
+    print(cadena.upper())   
+print(cadenalower())
+    print(cadena.strip())
+    x = cadena.rfind(" ")
+    print(x)
+
+frase = input("Introduce una frase: ")
+print(frase[::-1])
+
+#Literales de cadena con formato
+base = 10.6666
+lado = 20.3891
+area_total = 2*base + lado
+print(f"El área de la base es {base:.2f}, el del lado {lado:.2f} y el área total es {area_total:.2f}")
+import datetime
+#from dateutil.relativedelta import relativedelta
+actual=datetime.date.today()
+nac=datetime.date(1998,4,25)
+print(actual)
+print(nac)
+edad = actual.year-nac.year
+print(f"{edad} años")
+
+#print(f"{edad.years} años, {edad.months} meses y {edad.days} días")    """
+
+######################Funciones
+def intro():
+    print('Este código solo imprime este mensaje.')
+
+intro()
+intro()
+
+################
+def imc_cal(peso,talla):
+    imc= peso/talla**2
+    print (imc)
+    if imc>30: 
+        print ("Obeso ")
+    elif imc>25:
+        print ("tiene sobrepeso")
+    elif imc>19:
+        print ("Peso normal")
+    else: 
+        print ("Esta desnutrido")
+    
+    return(imc)
+
+print("como esta su imc")
+imc=valor=(float)
+x=int(input("ingrese su peso en kg"))
+y=float(input("ingrese su talla en mt"))
+
+calc=imc_cal(x,y)
+print(f"Su imc es: {calc} ud. esta")
+
+#######################################
+####Mostrar muestre por pantalla la cuenta atrás desde ese número hasta cero separados por comas.
+n = int(input("Introduce un número entero positivo: "))
+for i in range(n, -1, -1):
+    print(i, end=", ")
+
+
+###############################
+amount = float(input("¿Cantidad a invertir? "))
+interest = float(input("¿Interés porcentual anual? "))
+years = int(input("¿Años?"))
+for i in range(years):
+    amount *= 1 + interest / 100 
+    print("Capital tras " + str(i+1) + " años: " + str(round(amount, 2)))
+
+
+
+
+
+
+
+
+c.	Revise un conjunto de n vehículos, hasta que la persona diga que no.
+marca, patente, año, valor  
+usado o no.
+msotrar estadisticas  auto mas caro, barato, mas antiguo, promedio etc. 
+
+Conociendo el último dígito de la patente asígnele un color:
+Dígito	Color
+1 o 2	amarilla
+3 o 4	magenta
+5 o 6	roja
+7 o 8	verde
+9 o 0	cian
+
+Determinar la cantidad de vehículos de cada color que se registraron durante un día de registro.
+
+
+Pedir nombre, edad, si es repetidor o no y las 7 notas obtenidas en la primera evaluación. 
+No se permitirá introducir notas negativas o mayores de 10 (no hay que controlar que se introduzcan letras).
+
+Se preguntará si van a introducirse los datos de más alumnos. 
+En caso afirmativo, se repetirán los pasos anteriores hasta que se conteste que no. 
+Mostrar estadísticas de la clase (cuando ya no haya más alumnos).
+
+También es necesario mostrar varios datos como la nota máxima, 
+nota media, valor equivalente (insuficiente, suficiente, bien, notable y sobresaliente),
+materias aprobadas y materias suspendidas.
+
+#Ingrese un conjunto de n vehículos, hasta que la persona diga que no.
+#marca, patente, año, valor  
+#ingrese si es usado o no.
+#mostrar estadisticas:  auto mas caro, más barato, más antiguo, 
+#promedio precios autos usados.  
+
+#Ingrese un conjunto de n vehículos, hasta que la persona diga que no.
+# Ingresar marca, patente, año, valor   
+# ingrese si es usado o no.
+#mostrar estadisticas:  auto mas caro, auto más barato, auto más antiguo, 
+#promedio precios autos usados.  
+#determinar si el vehiculo es extranjero. Las patentes extranjeras empiezan por CD
+#print(cadena[0:2:1]) 
+nro = 1
+alto=viejo=us=pr=pro=j=autoEx=0
+car=car2=extraj=str()
+viejo=2022
+while nro != 0:
+  marca=input("ingrese la marca")
+  patente=input("Ingrese patente")
+  anno=int(input("Ingrses el año "))
+  precio=float(input("ingrese el precio"))
+  print("es usado?. Si - No")
+  usado=input()
+  j=j+1 #Contar cuentos son 
+  if precio>alto:    # Auto mas caro 
+      alto=precio
+      car=marca
+  if j==1:
+      menor=precio
+
+  if precio<menor:  # Auto mas barato
+      menor=precio
+      car2=marca
+  if anno<viejo:    #Auto mas viejo
+      viejo=anno
+      car2=marca
+  if usado=="Si":   # suma y saca promedio precio autos usados
+      us=us+1
+      pr=pr+precio
+      pro=pr/us
+
+  extraj=patente[0:2:1]
+  if extraj=="CD":
+      print(f"La patente {patente} prefijo {extraj}es auto extranjero")
+      autoEx+=1
+
+  nro=int(input("quiere seguir ingresando? 1 para SI - 0 para salir"))
+# FALTA MOSTRAR TODOS LOS ANTERIORES
