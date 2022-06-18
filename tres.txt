@@ -1,0 +1,172 @@
+import random
+
+#print("Comienzo")
+total = 0
+for i in range(1,4):
+    dado = random.randrange(1, 6)
+    #print(f"Tirada {i}: {dado}")
+    print("Tirada: ",dado)
+    total += dado
+print(f"En total ha obtenido {total} punto(s).")
+################
+
+
+### TRAMOS IMPUESTOS
+# Preguntar al usuario por la renta
+renta = float(input("¿Cuál es tu renta anual? "))
+# Condicional para determinar el tipo impositivo dependiendo de la renta
+if renta < 10000:
+    tipo = 5
+elif renta < 20000:
+    tipo = 15
+elif renta < 35000:
+    tipo = 20
+elif renta < 60000:
+    tipo = 30
+else:
+    tipo = 45
+# Mostrar por pantalla el producto de la renta por el tipo impositivo
+print("Tienes que pagar ", renta * tipo / 100, "€", sep='')
+
+#ingresa un número entero positivo y muestre por pantalla todos los números 
+#impares desde 1 hasta ese número separados por comas.
+n = int(input("Introduce un número entero positivo: "))
+for i in range(1, n+1, 2):
+    print(i, end=", ")
+## La función range() incrementa por defecto la secuencia en 1, 
+sin embargo es posible especificar el valor de incremento añadiendo un tercer parámetro
+
+## USO BREAK CUANDO PILLA UN 0
+cuenta = "235605042254223"
+for x in cuenta:
+  print(x)
+  if x == "0":
+    break
+
+####
+CICLO MIENTRS
+i = 1
+while i < 6:
+  print(i)
+  i += 1
+
+### adivinar un nro
+i = 1
+while i <> 0:
+  nro=int(input("Ingrese un nro o presione 0 para salir"))
+  if nro==5:
+    print("adivinaste el numero")
+    break
+  
+import random
+#numero=random.choice(["uno","dos","tres","cuatro","cinco","seis"])
+numero=random.randint(1,10)
+print(numero)
+
+#####################
+
+########print("adivinar el numero entre 1 y 20")
+import random
+numero=random.randint(1,20)
+print(numero)
+j=nro=0
+while nro != numero:
+    print("Adivine el numero. Tiene 6 intentos sino presione 0")
+    nro=int(input("Ingrese nro"))
+    j=j+1
+    if nro==0:
+        break
+    if j==6:
+        print("Has llegado al maximo de intentlos")
+        break
+    print("intento "+str(j))
+if nro==numero:
+    print("Felicitaciones adivinaste!!")
+    
+### casados solteros 
+Mostrar "Ingrese la cantidad de personas"
+	Leer n
+	Para i=1 hasta n
+		
+		Mostrar  "Ingrese el sexo de la persona ",i
+		Mostrar "1-Masculino"
+		Mostrar "2-Femenino"
+		Leer sexo
+		
+		Escribir "Ingrese el estado civil de la persona ",i
+		Mostrar "1.-Casado"
+		Mostrar "2.-Soltero"
+		Mostrar "3.-Viudo"
+		Mostrar "4-Divorciado"
+		Leer estado_civil
+				
+		Si sexo=2 y estado_civil=2 Entonces
+			Soltera<-Soltera+1
+		FinSi
+				
+		    Si sexo=1 y estado_civil=1 Entonces
+			    Hcasado<-Hcasado+1
+		    FinSi
+						
+		Si estado_civil=3 Entonces
+			 Viudos<-Viudos+1
+		FinSi
+		
+		
+		    Si estado_civil=4 Entonces
+			    Div<-Div+1
+		    FinSi
+		
+	FinPara
+		
+		
+	PorcDiv<-(Div*100)/n
+	Escribir "La cantidad de mujeres solteras es: ",Soltera
+	Escribir "La cantidad de hombres cadasos es: ",Hcasado
+	Escribir "La cantidad de personas viudas es: ",Viudos
+	Escribir "Las personas divorciadas equivalen al ",PorcDiv,"% del total de personas"
+#############################
+print("ingrese la cantidad de personas")
+n = float(input())
+for i in range(1,n+1):
+print("Ingrese edad")
+edad = input()
+print("indique sexo")
+print("1; Si su sexo es Masculino")
+print("2: Si su sexo es Femenino")
+sexo = input()
+print("indique su categoria de pelicula preferida")
+print("1: Accion")
+print("2: Comedia")
+print("3: Documentales")
+print("4: Animacion")
+cat = input()
+if sexo==2 and cat==2:
+c = c+1
+if cat==3:
+d = d+1
+if cat==1:
+# acumulador para porcentaje
+ac = ac+1
+if cat==4:
+# cuantos son
+acprom = acprom+1
+# acumulador para promedio
+ed = ed+edad
+prom = ed/acprom
+if edad>35 and cat==4:
+an = an+1
+if edad>18 and sexo==1 and cat==3:
+# acumula edad
+doc = edad+doc
+# cuantos son
+docac = docac+1
+promdoc = doc/docac
+porcentaje = ac/n*100
+print("La cantidad de mujeres que prefieren la comedia es ",c)
+print("La cantidad de personas que ven documentales es ",d)
+print("El porcentaje de personas que ven peliculas de accion es ",porcentaje)
+print("El promedio de edad de personas que le gusta la animacion es ",prom)
+print("La cantidad de mayores de 35 que le gusta la animacion es ",an)
+print("EL promedio de edad de varones mayores de 18 que le gustan los documentales es ",promdoc)
+
